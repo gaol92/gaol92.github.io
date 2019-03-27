@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[My First Blog]]></title>
+    <url>%2F2019%2F03%2F26%2Fmy-first-blog%2F</url>
+    <content type="text"><![CDATA[1、搭建GitHub博客之前的前提条件 已在GitHub上注册了一个账号 Windows上已安装了node.js、npm cmd下键入node -v检测是否安装了node.js；键入npm -v检测是否安装了npm Window上已安装了git for windows 2、搭建GitHub博客之前的准备 在GitHub中创建仓库，仓库的名称必须为：github用户名.github.io（如果不够买域名的话，该名称就是未来个人博客的访问地址） 配置SSH key 3、开始动手搭建基于GitHub+Hexo的个人博客 测试代码： 123456789101112131415161718192021222324252627282930313233343536373839404142434445import timedef save_log(): print('Saving logger......')def logger(flag=False): def compute_time(f): # def compute_time(f,flag=False) def inner(*args): # 虽然装饰器函数运行结束了，但闭包函数仍可以访问装饰器函数的Enclosing变量 s_time = time.time() f(*args) cost_time = time.time() - s_time print(f'cost time:&#123;cost_time&#125;') if flag == True: save_log() return inner return compute_time @logger(True) # 错误：f1 = logger(f,True)，“@logger(True)”相当于“f1 = logger(True)(f1)” # 错误：@compute_time(f1,flag=True) # @compute_time # f1 = compute_time(f1)def f1(*args): sum = 0 for i in args: sum += i print(sum) time.sleep(1)@logger() # f2 = logger()(f2)# @compute_time # f2 = compute_time(f2)def f2(*args): print(args) time.sleep(0.5)if __name__ == '__main__': # f1 = compute_time(f1,True) # f1是和原函数“f1(*args)”同名的闭包函数的地址变量 # f1 = logger(True)(f1) f1(1,2,3,4,5) # f2 = compute_time(f2) # f2 = logger(True)(f2) f2(2,4,6,8,10)]]></content>
+      <categories>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何使用GitHub Pages+Hexo搭建免费个性化博客]]></title>
+    <url>%2F2019%2F03%2F26%2F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8GitHub%20Pages%2BHexo%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E6%80%A7%E5%8C%96%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[1、搭建GitHub博客之前的前提条件 已在GitHub上注册了一个账号 Windows上已安装了node.js、npm cmd下键入node -v检测是否安装了node.js；键入npm -v检测是否安装了npm Window上已安装了git for windows 2、搭建GitHub博客之前的准备 在GitHub中创建仓库，仓库的名称必须为：github用户名.github.io（如果不够买域名的话，该名称就是未来个人博客的访问地址） 配置SSH key 3、开始动手搭建基于GitHub+Hexo的个人博客]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>github pages</tag>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F03%2F26%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>默认分类</category>
+      </categories>
+  </entry>
+</search>
