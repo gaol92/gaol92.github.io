@@ -449,7 +449,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .header-inner {
-    width: 1800px;
+    width: 1600px;
   }
 }
 .main {
@@ -461,7 +461,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 1800px;
+    width: 1600px;
   }
 }
 .footer {
@@ -478,7 +478,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
-    width: 1800px;
+    width: 1600px;
   }
 }
 pre,
@@ -2054,7 +2054,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a10dff;
+  background: #443cff;
 }
 .links-of-blogroll {
   font-size: 13px;
