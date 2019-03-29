@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="gaol的技术博客">
 <meta property="og:description" content="GitHub Pages + Hexo 搭建个人博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T07:56:57.690Z">
+<meta property="og:updated_time" content="2019-03-29T08:04:30.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用GitHub Pages+Hexo搭建免费个性化博客">
 <meta name="twitter:description" content="GitHub Pages + Hexo 搭建个人博客">
@@ -479,8 +479,8 @@
 <li><p>发布到Github Pages上，使用专有域名访问自己的博客网站：<code>https://github用户名.github.io</code></p>
 <ul>
 <li><p>在站点配置文件<code>_config.yml</code>中配置<code>deploy</code>属性，例如我的是：        </p>
-<pre><code><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:gaol92/gaol92.github.io.git	# 此处改为自己的Github仓库地址</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
-</code></pre></li>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:gaol92/gaol92.github.io.git	# 此处改为自己的Github仓库地址</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>键入<code>hexo d</code>命令发布到GitHub Pages，如果做了配置文件的修改或markdown博文的编辑的话，先<code>hexo g</code></p>
 <ul>
 <li>如果此时报错：<code>Deployer not found: git</code>，那么在git-bash下安装一个插件：<code>npm install hexo-deployer-git --save</code></li>
@@ -493,14 +493,11 @@
 </li>
 </ul>
 <h4 id="3-3、个性化配置自己的博客（先在localhost测试好，最后再发布到GitHub-Pages吧）"><a href="#3-3、个性化配置自己的博客（先在localhost测试好，最后再发布到GitHub-Pages吧）" class="headerlink" title="3-3、个性化配置自己的博客（先在localhost测试好，最后再发布到GitHub Pages吧）"></a>3-3、个性化配置自己的博客（先在localhost测试好，最后再发布到GitHub Pages吧）</h4><ul>
-<li>首先要做的就是给我们的博客网站换个theme，默认Hexo自带的landscape主题还是不太美观的。<ul>
-<li>大家使用的比较多的就是hexo的next主题，其特点是简约、大方，可以很方便的做一些功能定制（我的博客theme就是next）。<ul>
+<li>首先要做的就是给我们的博客网站换个theme，默认Hexo自带的landscape主题还是不太美观的。<br>大家使用的比较多的就是hexo的next主题，其特点是简约、大方，可以很方便的做一些功能定制（我的博客theme就是next）。<ul>
 <li>进入到Hexo站点目录：<code>cd D:/Hexo</code>，然后clone下来next主题的所有文件到<code>D:/Hexo/themes</code>：<code>git clone https://github.com/iissnan/hexo-theme-next.git themes/next</code></li>
 <li>在站点配置文件<code>_config.yml</code>中找到<code>theme</code>属性，将<code>theme: landscape</code>修改为<code>theme: next</code>（==注意：== “theme”后面有一个空格）</li>
 <li>next主题有Muse、Mist、Pisces、Gemini 4种样式，在next的主题配置文件<code>_config.yml</code>中（我的位于：<code>D:\Hexo\themes\next</code>目录下）找到<code>scheme</code>属性，可以配置打开任一种自己喜欢的样式</li>
 <li>本地测试切换主题后的效果：<code>hexo g</code>,<code>hexo s</code>（如果出现错误，执行<code>hexo clean all</code>）</li>
-</ul>
-</li>
 </ul>
 </li>
 <li><p>给自己的博客网站起个名字，或给建站作者自己加点描述说明吧：<br>在站点配置文件<code>_config.yml</code>中找到对Site的描述属性做修改即可，例如我的：</p>
