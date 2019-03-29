@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="gaol的技术博客">
 <meta property="og:description" content="GitHub Pages + Hexo 搭建个人博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T07:20:44.950Z">
+<meta property="og:updated_time" content="2019-03-29T07:27:44.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用GitHub Pages+Hexo搭建免费个性化博客">
 <meta name="twitter:description" content="GitHub Pages + Hexo 搭建个人博客">
@@ -428,24 +428,43 @@
         <h3 id="1、搭建GitHub博客之前的前提条件"><a href="#1、搭建GitHub博客之前的前提条件" class="headerlink" title="1、搭建GitHub博客之前的前提条件"></a>1、搭建GitHub博客之前的前提条件</h3><ul>
 <li>有一个GitHub账号</li>
 <li>Windows上已安装了node.js、npm：cmd下键入<code>node -v</code>检测是否安装了node.js；键入<code>npm -v</code>检测是否安装了npm</li>
-<li>Window上已安装了git for windows</li>
-</ul>
-<h3 id="2、搭建GitHub博客之前的准备"><a href="#2、搭建GitHub博客之前的准备" class="headerlink" title="2、搭建GitHub博客之前的准备"></a>2、搭建GitHub博客之前的准备</h3><ul>
+<li>Window上已安装了git for windows<h3 id="2、搭建GitHub博客之前的准备"><a href="#2、搭建GitHub博客之前的准备" class="headerlink" title="2、搭建GitHub博客之前的准备"></a>2、搭建GitHub博客之前的准备</h3></li>
 <li>在GitHub中创建仓库，仓库的名称必须为：<code>github用户名.github.io</code>（如果不够买域名的话，该名称就是未来个人博客的访问地址，例如：<code>https://gaol92.github.io/</code>）</li>
-<li>配置SSH key</li>
-</ul>
-<h3 id="3、开始动手搭建基于GitHub-Pages-Hexo的个人博客"><a href="#3、开始动手搭建基于GitHub-Pages-Hexo的个人博客" class="headerlink" title="3、开始动手搭建基于GitHub Pages+Hexo的个人博客"></a>3、开始动手搭建基于GitHub Pages+Hexo的个人博客</h3><h4 id="3-1、首先大概了解一下什么是Hexo和GitHub-Pages"><a href="#3-1、首先大概了解一下什么是Hexo和GitHub-Pages" class="headerlink" title="3-1、首先大概了解一下什么是Hexo和GitHub Pages"></a>3-1、首先大概了解一下什么是Hexo和GitHub Pages</h4><ul>
+<li>配置SSH key<h3 id="3、开始动手搭建基于GitHub-Pages-Hexo的个人博客"><a href="#3、开始动手搭建基于GitHub-Pages-Hexo的个人博客" class="headerlink" title="3、开始动手搭建基于GitHub Pages+Hexo的个人博客"></a>3、开始动手搭建基于GitHub Pages+Hexo的个人博客</h3><h4 id="3-1、首先大概了解一下什么是Hexo和GitHub-Pages"><a href="#3-1、首先大概了解一下什么是Hexo和GitHub-Pages" class="headerlink" title="3-1、首先大概了解一下什么是Hexo和GitHub Pages"></a>3-1、首先大概了解一下什么是Hexo和GitHub Pages</h4></li>
 <li>Hexo是基于node.js的一个博客框架，它可以帮助我们将写好的markdown博文渲染成静态网页，然后我们通过Hexo的命令就可以将我们的博文以网页的形式发布到我们的服务器上。</li>
-<li>Github Pages是一个<strong>静态网站托管服务</strong>，用来管理你的来自一个GitHub库的个人的、组织的、或者项目的页面。即Github Pages是github上的一项功能，可以放置网页文件到指定文件夹，然后给你一个专属域名用于展示一些项目，但现在大多用来开发制作个人博客网站。</li>
-</ul>
-<h4 id="3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）"><a href="#3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）" class="headerlink" title="3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）"></a>3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）</h4><ul>
+<li>Github Pages是一个<strong>静态网站托管服务</strong>，用来管理你的来自一个GitHub库的个人的、组织的、或者项目的页面。即Github Pages是github上的一项功能，可以放置网页文件到指定文件夹，然后给你一个专属域名用于展示一些项目，但现在大多用来开发制作个人博客网站。<h4 id="3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）"><a href="#3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）" class="headerlink" title="3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）"></a>3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）</h4></li>
 <li>安装hexo：<pre><code>- 首先在电脑的某个盘下新建一个文件夹用来存储hexo的所有文件，例如我的是：`D:/Hexo`
 - `git-bash`命令行下输入：`npm install -g hexo`
 - 安装完成后，可使用命令`hexo -v`查看hexo的版本
 </code></pre></li>
 <li>初始化hexo：<br>进入到新建目录中（例如：<code>cd D:/Hexo</code>），输入命令：<code>hexo init</code>，之后会在该目录下生成以下目录及文件：</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">|目录/文件 |作用 |</span><br><span class="line">|:---|:---|</span><br><span class="line">| scaffolds | 该目录放的是一些通用的markdown模板 |</span><br><span class="line">| source | 资源目录，_posts发布的文章 |</span><br><span class="line">| themes | 博客主题目录，默认的主题landscape就放在此目录 |</span><br><span class="line">| _config.yml | 站点配置文件（主题目录下也有个此文件，是主题配置文件） |</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录/文件</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">scaffolds</td>
+<td style="text-align:left">该目录放的是一些通用的markdown模板</td>
+</tr>
+<tr>
+<td style="text-align:left">source</td>
+<td style="text-align:left">资源目录，_posts发布的文章</td>
+</tr>
+<tr>
+<td style="text-align:left">themes</td>
+<td style="text-align:left">博客主题目录，默认的主题landscape就放在此目录</td>
+</tr>
+<tr>
+<td style="text-align:left">_config.yml</td>
+<td style="text-align:left">站点配置文件（主题目录下也有个此文件，是主题配置文件）</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>使用markdown解析文章，生成静态网页文件：键入命令<code>hexo g</code>。此时会在<code>D:/Hexo</code>目录下生成public目录，此目录存放的就是生成的静态文件，这个目录最终会发布到服务器</li>
 <li>本地测试博客效果：输入命令<code>hexo s</code>，然后在浏览器中键入<code>http://localhost:4000</code>查看效果，默认使用的是Hexo自带的landscape主题，默认有一篇博文<code>Hello World</code>（该博文的markdown文件就放在<code>D:\Hexo\source\_posts</code>目录下） </li>
@@ -478,7 +497,7 @@
 <li><p>给自己的博客网站起个名字，或给建站作者自己加点描述说明吧：<br>在站点配置文件<code>_config.yml</code>中找到对Site的描述属性做修改即可，例如我的：</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Site</span></span><br><span class="line"><span class="symbol">title:</span> gaol的技术博客</span><br><span class="line"><span class="symbol">subtitle:</span></span><br><span class="line"><span class="symbol">description:</span> 心之所向 素履所往</span><br><span class="line"><span class="symbol">keywords:</span></span><br><span class="line"><span class="symbol">author:</span> gaol</span><br><span class="line"><span class="symbol">language:</span> <span class="built_in">zh</span>-Hans</span><br><span class="line"><span class="symbol">timezone:</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>博客网站菜单显示：<br>在主题配置文件<code>_config.yml</code>中搜索<code>menu</code>属性，可以将自己要展示的菜单屏蔽打开，同时将。由于此时未对具体的菜单属性值做设置，所以在本地点击后会出现类似<code>Cannot GET /sitemap.xml</code>的提示，GitHub Pages上打开则是404页面。</p>
+<li><p>博客网站菜单显示：<br>在主题配置文件<code>_config.yml</code>中搜索<code>menu</code>属性，可以将自己要展示的菜单屏蔽打开，同时将<code>menu_icons</code>属性的<code>enable</code>值修改为<code>true</code>。由于此时未对具体的菜单属性值做设置，所以在本地点击后会出现类似<code>Cannot GET /sitemap.xml</code>的提示，GitHub Pages上打开则是404页面。</p>
 </li>
 <li>未完待续……</li>
 </ul>
