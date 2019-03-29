@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="gaol的技术博客">
 <meta property="og:description" content="GitHub Pages + Hexo 搭建个人博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T02:19:44.737Z">
+<meta property="og:updated_time" content="2019-03-29T02:45:46.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用GitHub Pages+Hexo搭建免费个性化博客">
 <meta name="twitter:description" content="GitHub Pages + Hexo 搭建个人博客">
@@ -442,11 +442,36 @@
 <li><code>git-bash</code>命令行下输入：<code>npm install -g hexo</code></li>
 </ul>
 </li>
-<li><p>初始化hexo：<br>进入到新建目录中（例如：<code>cd D:/Hexo</code>），输入命令：<code>hexo init</code>，之后会在该目录下生成以下目录及文件：</p>
-<p>  |目录/文件 |作用 |<br>  |:—|:—|<br>  | scaffolds | 该目录放的是一些通用的markdown模板 |<br>  | source | 资源目录，_posts发布的文章 |<br>  | themes | 博客主题目录，默认的主题landscape就放在此目录 |<br>  | _config.yml | 站点配置文件（主题目录下也有个此文件，是主题配置文件） |</p>
-</li>
-<li><p>使用markdown解析文章，生成静态网页文件：键入命令<code>hexo g</code>。此时会在<code>D:/Hexo</code>目录下生成public目录，此目录存放的就是生成的静态文件，这个目录最终会发布到服务器</p>
-</li>
+<li>初始化hexo：<br>进入到新建目录中（例如：<code>cd D:/Hexo</code>），输入命令：<code>hexo init</code>，之后会在该目录下生成以下目录及文件：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录/文件</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">scaffolds</td>
+<td style="text-align:left">该目录放的是一些通用的markdown模板</td>
+</tr>
+<tr>
+<td style="text-align:left">source</td>
+<td style="text-align:left">资源目录，_posts发布的文章</td>
+</tr>
+<tr>
+<td style="text-align:left">themes</td>
+<td style="text-align:left">博客主题目录，默认的主题landscape就放在此目录</td>
+</tr>
+<tr>
+<td style="text-align:left">_config.yml</td>
+<td style="text-align:left">站点配置文件（主题目录下也有个此文件，是主题配置文件）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>使用markdown解析文章，生成静态网页文件：键入命令<code>hexo g</code>。此时会在<code>D:/Hexo</code>目录下生成public目录，此目录存放的就是生成的静态文件，这个目录最终会发布到服务器</li>
 <li>本地测试博客效果：输入命令<code>hexo s</code>，然后在浏览器中键入<code>http://localhost:4000</code>查看效果，默认使用的是Hexo自带的landscape主题，默认有一篇博文<code>Hello World</code>（该博文的markdown文件就放在<code>D:\Hexo\source\_posts</code>目录下） </li>
 <li><p>发布到Github Pages上，使用专有域名访问自己的博客网站：<code>https://github用户名.github.io</code></p>
 <ul>
@@ -556,8 +581,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/26/my-first-blog/" rel="next" title="My First Blog">
-                <i class="fa fa-chevron-left"></i> My First Blog
+              <a href="/2019/03/26/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -565,6 +590,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/26/my-first-blog/" rel="prev" title="My First Blog">
+                My First Blog <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
