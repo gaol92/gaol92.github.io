@@ -81,11 +81,11 @@
 <meta name="keywords" content="github pages,hexo,blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何使用GitHub Pages+Hexo搭建免费个性化博客">
-<meta property="og:url" content="https://yoursite.com/2019/03/26/如何使用GitHub Pages+Hexo搭建免费个性化博客/index.html">
+<meta property="og:url" content="https://yoursite.com/2019/03/28/如何使用GitHub Pages+Hexo搭建免费个性化博客/index.html">
 <meta property="og:site_name" content="gaol的技术博客">
 <meta property="og:description" content="GitHub Pages + Hexo 搭建个人博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T02:52:34.714Z">
+<meta property="og:updated_time" content="2019-03-29T07:20:44.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用GitHub Pages+Hexo搭建免费个性化博客">
 <meta name="twitter:description" content="GitHub Pages + Hexo 搭建个人博客">
@@ -118,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="https://yoursite.com/2019/03/26/如何使用GitHub Pages+Hexo搭建免费个性化博客/">
+  <link rel="canonical" href="https://yoursite.com/2019/03/28/如何使用GitHub Pages+Hexo搭建免费个性化博客/">
 
 
 
@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yoursite.com/2019/03/26/如何使用GitHub Pages+Hexo搭建免费个性化博客/">
+    <link itemprop="mainEntityOfPage" href="https://yoursite.com/2019/03/28/如何使用GitHub Pages+Hexo搭建免费个性化博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gaol">
@@ -345,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T17:53:35+08:00">
-                2019-03-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T17:53:35+08:00">
+                2019-03-28
               </time>
             
 
@@ -387,8 +387,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2019/03/26/如何使用GitHub Pages+Hexo搭建免费个性化博客/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/03/26/如何使用GitHub Pages+Hexo搭建免费个性化博客/" itemprop="commentsCount"></span>
+                <a href="/2019/03/28/如何使用GitHub Pages+Hexo搭建免费个性化博客/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/03/28/如何使用GitHub Pages+Hexo搭建免费个性化博客/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -439,32 +439,48 @@
 <li>Github Pages是一个<strong>静态网站托管服务</strong>，用来管理你的来自一个GitHub库的个人的、组织的、或者项目的页面。即Github Pages是github上的一项功能，可以放置网页文件到指定文件夹，然后给你一个专属域名用于展示一些项目，但现在大多用来开发制作个人博客网站。</li>
 </ul>
 <h4 id="3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）"><a href="#3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）" class="headerlink" title="3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）"></a>3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）</h4><ul>
-<li>安装hexo：<ul>
-<li>首先在电脑的某个盘下新建一个文件夹用来存储hexo的所有文件，例如我的是：<code>D:/Hexo</code></li>
-<li><code>git-bash</code>命令行下输入：<code>npm install -g hexo</code></li>
+<li>安装hexo：<pre><code>- 首先在电脑的某个盘下新建一个文件夹用来存储hexo的所有文件，例如我的是：`D:/Hexo`
+- `git-bash`命令行下输入：`npm install -g hexo`
+- 安装完成后，可使用命令`hexo -v`查看hexo的版本
+</code></pre></li>
+<li>初始化hexo：<br>进入到新建目录中（例如：<code>cd D:/Hexo</code>），输入命令：<code>hexo init</code>，之后会在该目录下生成以下目录及文件：</li>
 </ul>
-</li>
-<li><p>初始化hexo：<br>进入到新建目录中（例如：<code>cd D:/Hexo</code>），输入命令：<code>hexo init</code>，之后会在该目录下生成以下目录及文件：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">|目录/文件 |作用 |</span><br><span class="line">|:---|:---|</span><br><span class="line">| scaffolds | 该目录放的是一些通用的markdown模板 |</span><br><span class="line">| source | 资源目录，_posts发布的文章 |</span><br><span class="line">| themes | 博客主题目录，默认的主题landscape就放在此目录 |</span><br><span class="line">| _config.yml | 站点配置文件（主题目录下也有个此文件，是主题配置文件） |</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用markdown解析文章，生成静态网页文件：键入命令<code>hexo g</code>。此时会在<code>D:/Hexo</code>目录下生成public目录，此目录存放的就是生成的静态文件，这个目录最终会发布到服务器</p>
-</li>
+<ul>
+<li>使用markdown解析文章，生成静态网页文件：键入命令<code>hexo g</code>。此时会在<code>D:/Hexo</code>目录下生成public目录，此目录存放的就是生成的静态文件，这个目录最终会发布到服务器</li>
 <li>本地测试博客效果：输入命令<code>hexo s</code>，然后在浏览器中键入<code>http://localhost:4000</code>查看效果，默认使用的是Hexo自带的landscape主题，默认有一篇博文<code>Hello World</code>（该博文的markdown文件就放在<code>D:\Hexo\source\_posts</code>目录下） </li>
 <li><p>发布到Github Pages上，使用专有域名访问自己的博客网站：<code>https://github用户名.github.io</code></p>
-<ul>
-<li><p>在站点配置文件<code>_config.yml</code>中配置<code>deploy</code>属性，例如我的是：        </p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:gaol92/gaol92.github.io.git	# 此处改为自己的Github仓库地址</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>键入<code>hexo d</code>命令发布到GitHub Pages，如果做了配置文件的修改或markdown博文的编辑的话，先<code>hexo g</code></p>
-<ul>
+<pre><code>- 在站点配置文件`_config.yml`中配置`deploy`属性，例如我的是：        
+    `deploy:
+      type: git
+      repository: git@github.com:gaol92/gaol92.github.io.git    # 此处改为自己的Github仓库地址
+      branch: master`
+- 键入`hexo d`命令发布到GitHub Pages，如果做了配置文件的修改或markdown博文的编辑的话，先`hexo g`
+</code></pre><ul>
 <li>如果此时报错：<code>Deployer not found: git</code>，那么在git-bash下安装一个插件：<code>npm install hexo-deployer-git --save</code></li>
 <li>如果报错：<code>ERROR Local hexo not found in D:\Hexo</code>，参看博客：<a href="https://blog.csdn.net/yellowmushroom/article/details/80680022" target="_blank" rel="noopener">搭建Hexo博客在git上执行 hexo d /hexo g 报错:ERROR Local hexo not found in D:\hexo 解决</a></li>
 </ul>
 </li>
-</ul>
-</li>
 <li><p>至此，基于GitHub Pages和Hexo的博客框架就搭好了，接下来要做的就是个性化配置我们的博客……</p>
 </li>
+</ul>
+<h4 id="3-3、个性化配置自己的博客（先在localhost测试好，最后再发布到GitHub-Pages吧）"><a href="#3-3、个性化配置自己的博客（先在localhost测试好，最后再发布到GitHub-Pages吧）" class="headerlink" title="3-3、个性化配置自己的博客（先在localhost测试好，最后再发布到GitHub Pages吧）"></a>3-3、个性化配置自己的博客（先在localhost测试好，最后再发布到GitHub Pages吧）</h4><ul>
+<li>首先要做的就是给我们的博客网站换个theme，默认Hexo自带的landscape主题还是不太美观的。<ul>
+<li>大家使用的比较多的就是hexo的next主题，其特点是简约、大方，可以很方便的做一些功能定制（我的博客theme就是next）。<ul>
+<li>进入到Hexo站点目录：<code>cd D:/Hexo</code>，然后clone下来next主题的所有文件到<code>D:/Hexo/themes</code>：<code>git clone https://github.com/iissnan/hexo-theme-next.git themes/next</code></li>
+<li>在站点配置文件<code>_config.yml</code>中找到<code>theme</code>属性，将<code>theme: landscape</code>修改为<code>theme: next</code>（==注意：== “theme”后面有一个空格）</li>
+<li>next主题有Muse、Mist、Pisces、Gemini 4种样式，在next的主题配置文件<code>_config.yml</code>中（我的位于：<code>D:\Hexo\themes\next</code>目录下）找到<code>scheme</code>属性，可以配置打开任一种自己喜欢的样式</li>
+<li>本地测试切换主题后的效果：<code>hexo g</code>,<code>hexo s</code>（如果出现错误，执行<code>hexo clean all</code>）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>给自己的博客网站起个名字，或给建站作者自己加点描述说明吧：<br>在站点配置文件<code>_config.yml</code>中找到对Site的描述属性做修改即可，例如我的：</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Site</span></span><br><span class="line"><span class="symbol">title:</span> gaol的技术博客</span><br><span class="line"><span class="symbol">subtitle:</span></span><br><span class="line"><span class="symbol">description:</span> 心之所向 素履所往</span><br><span class="line"><span class="symbol">keywords:</span></span><br><span class="line"><span class="symbol">author:</span> gaol</span><br><span class="line"><span class="symbol">language:</span> <span class="built_in">zh</span>-Hans</span><br><span class="line"><span class="symbol">timezone:</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>博客网站菜单显示：<br>在主题配置文件<code>_config.yml</code>中搜索<code>menu</code>属性，可以将自己要展示的菜单屏蔽打开，同时将。由于此时未对具体的菜单属性值做设置，所以在本地点击后会出现类似<code>Cannot GET /sitemap.xml</code>的提示，GitHub Pages上打开则是404页面。</p>
+</li>
+<li>未完待续……</li>
 </ul>
 
       
@@ -526,7 +542,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://yoursite.com/2019/03/26/如何使用GitHub Pages+Hexo搭建免费个性化博客/" title="如何使用GitHub Pages+Hexo搭建免费个性化博客">https://yoursite.com/2019/03/26/如何使用GitHub Pages+Hexo搭建免费个性化博客/</a>
+    <a href="https://yoursite.com/2019/03/28/如何使用GitHub Pages+Hexo搭建免费个性化博客/" title="如何使用GitHub Pages+Hexo搭建免费个性化博客">https://yoursite.com/2019/03/28/如何使用GitHub Pages+Hexo搭建免费个性化博客/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -558,8 +574,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/26/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/03/26/my-first-blog/" rel="next" title="My First Blog">
+                <i class="fa fa-chevron-left"></i> My First Blog
               </a>
             
           </div>
@@ -567,10 +583,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/26/my-first-blog/" rel="prev" title="My First Blog">
-                My First Blog <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -644,7 +656,7 @@
               <img class="site-author-image" itemprop="image" src="/images/blog_logo.jpg" alt="gaol">
             
               <p class="site-author-name" itemprop="name">gaol</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">心之所向 素履所往</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -727,7 +739,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、搭建GitHub博客之前的前提条件"><span class="nav-text">1、搭建GitHub博客之前的前提条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、搭建GitHub博客之前的准备"><span class="nav-text">2、搭建GitHub博客之前的准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、开始动手搭建基于GitHub-Pages-Hexo的个人博客"><span class="nav-text">3、开始动手搭建基于GitHub Pages+Hexo的个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1、首先大概了解一下什么是Hexo和GitHub-Pages"><span class="nav-text">3-1、首先大概了解一下什么是Hexo和GitHub Pages</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）"><span class="nav-text">3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、搭建GitHub博客之前的前提条件"><span class="nav-text">1、搭建GitHub博客之前的前提条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、搭建GitHub博客之前的准备"><span class="nav-text">2、搭建GitHub博客之前的准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、开始动手搭建基于GitHub-Pages-Hexo的个人博客"><span class="nav-text">3、开始动手搭建基于GitHub Pages+Hexo的个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1、首先大概了解一下什么是Hexo和GitHub-Pages"><span class="nav-text">3-1、首先大概了解一下什么是Hexo和GitHub Pages</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）"><span class="nav-text">3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3、个性化配置自己的博客（先在localhost测试好，最后再发布到GitHub-Pages吧）"><span class="nav-text">3-3、个性化配置自己的博客（先在localhost测试好，最后再发布到GitHub Pages吧）</span></a></li></ol></li></ol></div>
             
 
           </div>
