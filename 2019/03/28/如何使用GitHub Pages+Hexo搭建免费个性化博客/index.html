@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="gaol的技术博客">
 <meta property="og:description" content="GitHub Pages + Hexo 搭建个人博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T07:27:44.994Z">
+<meta property="og:updated_time" content="2019-03-29T07:46:44.990Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何使用GitHub Pages+Hexo搭建免费个性化博客">
 <meta name="twitter:description" content="GitHub Pages + Hexo 搭建个人博客">
@@ -433,10 +433,12 @@
 <li>配置SSH key<h3 id="3、开始动手搭建基于GitHub-Pages-Hexo的个人博客"><a href="#3、开始动手搭建基于GitHub-Pages-Hexo的个人博客" class="headerlink" title="3、开始动手搭建基于GitHub Pages+Hexo的个人博客"></a>3、开始动手搭建基于GitHub Pages+Hexo的个人博客</h3><h4 id="3-1、首先大概了解一下什么是Hexo和GitHub-Pages"><a href="#3-1、首先大概了解一下什么是Hexo和GitHub-Pages" class="headerlink" title="3-1、首先大概了解一下什么是Hexo和GitHub Pages"></a>3-1、首先大概了解一下什么是Hexo和GitHub Pages</h4></li>
 <li>Hexo是基于node.js的一个博客框架，它可以帮助我们将写好的markdown博文渲染成静态网页，然后我们通过Hexo的命令就可以将我们的博文以网页的形式发布到我们的服务器上。</li>
 <li>Github Pages是一个<strong>静态网站托管服务</strong>，用来管理你的来自一个GitHub库的个人的、组织的、或者项目的页面。即Github Pages是github上的一项功能，可以放置网页文件到指定文件夹，然后给你一个专属域名用于展示一些项目，但现在大多用来开发制作个人博客网站。<h4 id="3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）"><a href="#3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）" class="headerlink" title="3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）"></a>3-2、开始个人博客网站的搭建之旅（以下所有命令均在git-bash中操作）</h4></li>
-<li>安装hexo：<pre><code>- 首先在电脑的某个盘下新建一个文件夹用来存储hexo的所有文件，例如我的是：`D:/Hexo`
-- `git-bash`命令行下输入：`npm install -g hexo`
-- 安装完成后，可使用命令`hexo -v`查看hexo的版本
-</code></pre></li>
+<li>安装hexo：<ul>
+<li>首先在电脑的某个盘下新建一个文件夹用来存储hexo的所有文件，例如我的是：<code>D:/Hexo</code></li>
+<li><code>git-bash</code>命令行下输入：<code>npm install -g hexo</code></li>
+<li>安装完成后，可使用命令<code>hexo -v</code>查看hexo的版本</li>
+</ul>
+</li>
 <li>初始化hexo：<br>进入到新建目录中（例如：<code>cd D:/Hexo</code>），输入命令：<code>hexo init</code>，之后会在该目录下生成以下目录及文件：</li>
 </ul>
 <table>
@@ -469,15 +471,17 @@
 <li>使用markdown解析文章，生成静态网页文件：键入命令<code>hexo g</code>。此时会在<code>D:/Hexo</code>目录下生成public目录，此目录存放的就是生成的静态文件，这个目录最终会发布到服务器</li>
 <li>本地测试博客效果：输入命令<code>hexo s</code>，然后在浏览器中键入<code>http://localhost:4000</code>查看效果，默认使用的是Hexo自带的landscape主题，默认有一篇博文<code>Hello World</code>（该博文的markdown文件就放在<code>D:\Hexo\source\_posts</code>目录下） </li>
 <li><p>发布到Github Pages上，使用专有域名访问自己的博客网站：<code>https://github用户名.github.io</code></p>
-<pre><code>- 在站点配置文件`_config.yml`中配置`deploy`属性，例如我的是：        
-    `deploy:
-      type: git
-      repository: git@github.com:gaol92/gaol92.github.io.git    # 此处改为自己的Github仓库地址
-      branch: master`
-- 键入`hexo d`命令发布到GitHub Pages，如果做了配置文件的修改或markdown博文的编辑的话，先`hexo g`
-</code></pre><ul>
+<ul>
+<li>在站点配置文件<code>_config.yml</code>中配置<code>deploy</code>属性，例如我的是：        <pre><code>`deploy:
+  type: git
+  repository: git@github.com:gaol92/gaol92.github.io.git    # 此处改为自己的Github仓库地址
+  branch: master`
+</code></pre></li>
+<li>键入<code>hexo d</code>命令发布到GitHub Pages，如果做了配置文件的修改或markdown博文的编辑的话，先<code>hexo g</code><ul>
 <li>如果此时报错：<code>Deployer not found: git</code>，那么在git-bash下安装一个插件：<code>npm install hexo-deployer-git --save</code></li>
 <li>如果报错：<code>ERROR Local hexo not found in D:\Hexo</code>，参看博客：<a href="https://blog.csdn.net/yellowmushroom/article/details/80680022" target="_blank" rel="noopener">搭建Hexo博客在git上执行 hexo d /hexo g 报错:ERROR Local hexo not found in D:\hexo 解决</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>至此，基于GitHub Pages和Hexo的博客框架就搭好了，接下来要做的就是个性化配置我们的博客……</p>
